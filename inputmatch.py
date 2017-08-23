@@ -23,30 +23,21 @@ with open("/files/text2.txt","r") as text1:
     a2=(n2[-10:])
 
 
-
-
-
 if a1==a2:
 
-    with open("/files/output.txt","w") as z:
+    while counter<total:
+        #print("hai")
+        with open("/files/output.txt","a") as z:
 
-        for tot in lines[0]:
 
-            z.write(tot)
-        z.write(",")
+            for tot in lines[counter]:
 
-        for tot1 in lines1[0]:
-            z.write(tot1)
+                z.write(tot)
+            z.write(",")
 
-        for tot2 in lines[1]:
-            z.write(tot2)
-
-        z.write(",")
-
-        for tot3 in lines1[1]:
-            z.write(tot3)
-            
-              
+            for tot1 in lines1[counter]:
+                z.write(tot1)
+    counter=counter+1
                 
 
 else:
